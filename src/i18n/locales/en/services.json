@@ -10,38 +10,31 @@
     "starter": {
       "name": "Starter",
       "tagline": "The perfect starting point",
-      "f1": "Static website (1–5 pages)",
+      "f1": "One-pager (Landing Page)",
       "f2": "Responsive design (Mobile-First)",
-      "f3": "Basic SEO optimization",
-      "f4": "Contact form",
-      "f5": "Imprint & Privacy policy",
-      "f6": "SSL certificate",
-      "f7": "1 revision"
+      "f3": "Contact form",
+      "f4": "Imprint & Privacy policy",
+      "f5": "1 revision"
     },
     "professional": {
       "name": "Professional",
       "tagline": "For growing businesses",
       "f1": "Everything in Starter",
-      "f2": "Up to 10 pages",
-      "f3": "Animations & scroll effects",
-      "f4": "Blog / news section",
-      "f5": "Google Maps integration",
-      "f6": "Social media links",
-      "f7": "Basic analytics setup",
-      "f8": "3 revisions"
+      "f2": "Up to 5 pages",
+      "f3": "Basic SEO optimization",
+      "f4": "Google Maps integration",
+      "f5": "Social media links",
+      "f6": "2 revisions"
     },
     "enterprise": {
-      "name": "Enterprise",
-      "tagline": "Premium without compromise",
+      "name": "Premium",
+      "tagline": "The all-rounder",
       "f1": "Everything in Professional",
-      "f2": "Unlimited pages",
-      "f3": "Custom design system",
-      "f4": "CMS (Content Management)",
-      "f5": "Multilingual (i18n)",
-      "f6": "Performance optimization (Core Web Vitals)",
-      "f7": "Advanced SEO strategy",
-      "f8": "Priority support",
-      "f9": "5 revisions"
+      "f2": "Up to 10 pages",
+      "f3": "CMS (Content Management)",
+      "f4": "Basic analytics setup",
+      "f5": "Priority support",
+      "f6": "3 revisions"
     }
   },
   "addons": {

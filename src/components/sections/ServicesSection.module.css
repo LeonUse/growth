@@ -26,7 +26,7 @@
   gap: var(--space-6);
   margin-bottom: var(--space-20);
   align-items: stretch;
-  padding-top: var(--space-8);
+  padding-top: var(--space-12);
 }
 
 .card--popular {
@@ -210,5 +210,11 @@
     grid-template-columns: 1fr;
     max-width: 480px;
     margin-inline: auto;
+    gap: var(--space-12);
+  }
+
+  /* Add extra margin to the popular card on mobile to accommodate the absolute badge */
+  .card--popular {
+    margin-top: var(--space-8);
   }
 }

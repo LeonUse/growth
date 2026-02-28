@@ -10,38 +10,31 @@
     "starter": {
       "name": "Starter",
       "tagline": "Der perfekte Einstieg",
-      "f1": "Statische Website (1–5 Seiten)",
+      "f1": "One-Pager (Landing Page)",
       "f2": "Responsives Design (Mobile-First)",
-      "f3": "SEO-Grundoptimierung",
-      "f4": "Kontaktformular",
-      "f5": "Impressum & Datenschutz",
-      "f6": "SSL-Zertifikat",
-      "f7": "1 Revision"
+      "f3": "Kontaktformular",
+      "f4": "Impressum & Datenschutz",
+      "f5": "1 Revision"
     },
     "professional": {
       "name": "Professional",
       "tagline": "Für wachsende Unternehmen",
       "f1": "Alles aus Starter",
-      "f2": "Bis zu 10 Seiten",
-      "f3": "Animationen & Scroll-Effekte",
-      "f4": "Blog / News-Bereich",
-      "f5": "Google Maps Integration",
-      "f6": "Social Media Verlinkung",
-      "f7": "Basis-Analytics-Setup",
-      "f8": "3 Revisionen"
+      "f2": "Bis zu 5 Seiten",
+      "f3": "SEO-Grundoptimierung",
+      "f4": "Google Maps Integration",
+      "f5": "Social Media Verlinkung",
+      "f6": "2 Revisionen"
     },
     "enterprise": {
-      "name": "Enterprise",
-      "tagline": "Premium ohne Kompromisse",
+      "name": "Premium",
+      "tagline": "Der Alleskönner",
       "f1": "Alles aus Professional",
-      "f2": "Unbegrenzte Seiten",
-      "f3": "Custom Design System",
-      "f4": "CMS (Content Management)",
-      "f5": "Mehrsprachig (i18n)",
-      "f6": "Performance-Optimierung (Core Web Vitals)",
-      "f7": "Erweiterte SEO-Strategie",
-      "f8": "Priority Support",
-      "f9": "5 Revisionen"
+      "f2": "Bis zu 10 Seiten",
+      "f3": "CMS (Content Management)",
+      "f4": "Basis-Analytics-Setup",
+      "f5": "Priority Support",
+      "f6": "3 Revisionen"
     }
   },
   "addons": {

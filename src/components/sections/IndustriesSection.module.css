@@ -29,6 +29,11 @@
   margin-bottom: var(--space-4);
 }
 
+.cardWrapper {
+  display: flex;
+  height: 100%;
+}
+
 /* Single category card – all same height via stretching */
 .catCard {
   display: flex;
@@ -65,7 +70,7 @@
   flex-shrink: 0;
 }
 
-.catCardText {
+.catIconText {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
@@ -102,6 +107,8 @@
 /* ── Level 2: Detail Panel (full-width, below cards) ──────── */
 
 .detailPanel {
+  grid-column: 1 / -1;
+  order: var(--order-desktop, 99);
   overflow: hidden;
   max-height: 0;
   opacity: 0;
@@ -142,13 +149,27 @@
   padding: var(--space-5);
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
+  transition: background var(--dur-normal) var(--ease-out);
+}
+
+.detailCardOpen {
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .detailCardHeader {
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
+  cursor: pointer;
+  outline: none;
+  border-radius: var(--radius-sm);
+  transition: opacity 0.2s;
+}
+
+.detailCardHeader:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
 }
 
 .detailIcon {
@@ -157,11 +178,17 @@
   flex-shrink: 0;
 }
 
+.detailCardText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
 .detailCardTitle {
   font-size: var(--text-base);
   font-weight: var(--fw-semibold);
   color: var(--color-text);
-  margin-bottom: var(--space-1);
 }
 
 .detailCardTagline {
@@ -170,9 +197,34 @@
   line-height: 1.4;
 }
 
+.detailCardArrow {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  transition: transform 0.3s var(--ease-out);
+  padding-top: 2px;
+}
+
+.detailCardArrowOpen {
+  transform: rotate(180deg);
+}
+
+/* Pain points wrapper for accordion */
+.detailPainPointsWrapper {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s var(--ease-out), opacity 0.4s var(--ease-out);
+}
+
+.detailPainPointsWrapperOpen {
+  max-height: 1000px;
+  opacity: 1;
+}
+
 .detailPainPoints {
   border-top: 1px solid var(--color-border);
   padding-top: var(--space-4);
+  margin-top: var(--space-1);
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
@@ -241,9 +293,27 @@
 
 /* ── Responsive ────────────────────────────────────────────── */
 
+/* Tablet & Desktop - disable sub-accordion entirely */
+@media (min-width: 541px) {
+  .detailPainPointsWrapper {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible;
+  }
+  .detailCardArrow {
+    display: none;
+  }
+  .detailCardHeader {
+    cursor: default;
+  }
+}
+
 @media (max-width: 900px) {
   .categoryGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .detailPanel {
+    order: var(--order-tablet, 99);
   }
 }
 
@@ -251,8 +321,16 @@
   .categoryGrid {
     grid-template-columns: 1fr;
   }
-
+  .detailPanel {
+    order: var(--order-mobile, 99);
+  }
+  .detailPanelInner {
+    padding: var(--space-4);
+  }
   .detailGrid {
     grid-template-columns: 1fr;
+  }
+  .detailCard {
+    padding: var(--space-4);
   }
 }
