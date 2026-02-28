@@ -89,26 +89,53 @@ export const SnakeLine: React.FC = () => {
   // ── Path rebuild ────────────────────────────────────────────────────────────
 
   const rebuildPath = useCallback(() => {
-    const sections = document.querySelectorAll('main > section')
+    const main = document.querySelector('main')
+    if (!main) return
+    
+    const sections = main.querySelectorAll(':scope > section')
     if (sections.length === 0) return
 
     const sectionTops = Array.from(sections).map(
       (s) => (s as HTMLElement).offsetTop
     )
-    const docHeight = document.body.scrollHeight
+    
+    // Use the main element's height instead of body to avoid layout thrashing loop
+    const mainHeight = main.scrollHeight
     const docWidth = document.documentElement.clientWidth
 
-    setPageHeight(docHeight)
+    setPageHeight(mainHeight)
     setPageWidth(docWidth)
-    setPathData(buildSnakePath(sectionTops, docWidth, docHeight))
+    setPathData(buildSnakePath(sectionTops, docWidth, mainHeight))
   }, [])
 
   useEffect(() => {
+    // Initial build (slight delay so layout is settled)
     const timer = setTimeout(rebuildPath, 200)
+
+    // Window resize (width changes)
     window.addEventListener('resize', rebuildPath, { passive: true })
+
+    // ResizeObserver on <main>: catches height changes from expanding panels.
+    // We observe <main> (not body) to avoid infinite loops caused by the SVG
+    // overlay itself changing body dimensions.
+    // Debounced so it fires after CSS transitions finish (max-height animation).
+    let debounceTimer: ReturnType<typeof setTimeout>
+    const main = document.querySelector('main')
+    let ro: ResizeObserver | null = null
+
+    if (main) {
+      ro = new ResizeObserver(() => {
+        clearTimeout(debounceTimer)
+        debounceTimer = setTimeout(rebuildPath, 50)
+      })
+      ro.observe(main)
+    }
+
     return () => {
       clearTimeout(timer)
+      clearTimeout(debounceTimer)
       window.removeEventListener('resize', rebuildPath)
+      ro?.disconnect()
     }
   }, [rebuildPath])
 
@@ -118,8 +145,10 @@ export const SnakeLine: React.FC = () => {
     if (pathRef.current && pathData) {
       const len = pathRef.current.getTotalLength()
       totalLengthRef.current = len
-      // Set dasharray once; dashoffset will be driven by rAF
       pathRef.current.style.strokeDasharray = String(len)
+      // Re-apply current progress fraction to new path length so the line
+      // doesn't jump after the page height changes (e.g. panel expand).
+      pathRef.current.style.strokeDashoffset = String(len * (1 - maxProgressRef.current))
     }
   }, [pathData])
 

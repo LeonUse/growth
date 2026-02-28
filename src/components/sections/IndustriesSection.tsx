@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import Button from '../ui/Button'
@@ -6,26 +6,9 @@ import { industryCategories } from '../../data/siteData'
 import type { IndustryCategory, PainPoint } from '../../data/siteData'
 import styles from './IndustriesSection.module.css'
 
-// ── Sub-component types ───────────────────────────────────────────────────────
+// ── Pain Point Row ────────────────────────────────────────────────────────────
 
-interface IndustryCardProps {
-  categoryId: string
-  industryId: string
-  icon: string
-  painPoints: PainPoint[]
-  isExpanded: boolean
-  onToggle: () => void
-}
-
-
-// ── Sub-components ────────────────────────────────────────────────────────────
-
-const PainPointRow: React.FC<{
-  painPoint: PainPoint
-  categoryId: string
-  industryId: string
-  t: (key: string) => string
-}> = ({ painPoint, categoryId: _c, industryId: _i, t }) => (
+const PainPointRow: React.FC<{ painPoint: PainPoint; t: (k: string) => string }> = ({ painPoint, t }) => (
   <div className={styles.painPoint}>
     <p className={styles.problem}>
       <span className={styles.problemIcon}>✗</span>
@@ -38,106 +21,59 @@ const PainPointRow: React.FC<{
   </div>
 )
 
-const IndustryCard: React.FC<IndustryCardProps> = ({
-  categoryId,
-  industryId,
-  icon,
-  painPoints,
-  isExpanded,
-  onToggle,
-}) => {
-  const { t } = useTranslation('industries')
-  const expandedRef = useRef<HTMLDivElement>(null)
+// ── Industry Detail Card (shown in expanded panel, all info visible) ───────────
 
-  const previewPainPoint = painPoints[0]
-  const remainingPainPoints = painPoints.slice(1)
-  const hasAdditionalPainPoints = remainingPainPoints.length > 0
+const IndustryDetailCard: React.FC<{
+  categoryId: string
+  industryId: string
+  icon: string
+  painPoints: PainPoint[]
+}> = ({ categoryId, industryId, icon, painPoints }) => {
+  const { t } = useTranslation('industries')
 
   return (
-    <div className={[styles.card, isExpanded ? styles['card--expanded'] : ''].filter(Boolean).join(' ')}>
-      <div className={styles.cardHeader}>
-        <span className={styles.icon}>{icon}</span>
+    <div className={styles.detailCard}>
+      <div className={styles.detailCardHeader}>
+        <span className={styles.detailIcon}>{icon}</span>
         <div>
-          <h4 className={styles.cardTitle}>{t(`${categoryId}.${industryId}.name`)}</h4>
-          <p className={styles.cardTagline}>{t(`${categoryId}.${industryId}.tagline`)}</p>
+          <h4 className={styles.detailCardTitle}>{t(`${categoryId}.${industryId}.name`)}</h4>
+          <p className={styles.detailCardTagline}>{t(`${categoryId}.${industryId}.tagline`)}</p>
         </div>
       </div>
-
-      {/* Always-visible preview of the first pain point */}
-      {previewPainPoint && (
-        <div className={styles.previewPainPoint}>
-          <PainPointRow
-            painPoint={previewPainPoint}
-            categoryId={categoryId}
-            industryId={industryId}
-            t={t}
-          />
-        </div>
-      )}
-
-      {/* Expandable remaining pain points with CSS transition */}
-      {hasAdditionalPainPoints && (
-        <>
-          <div
-            ref={expandedRef}
-            className={[styles.expandedPainPoints, isExpanded ? styles['expandedPainPoints--open'] : ''].filter(Boolean).join(' ')}
-            aria-hidden={!isExpanded}
-          >
-            <div className={styles.expandedPainPointsInner}>
-              {remainingPainPoints.map((pp, index) => (
-                <PainPointRow
-                  key={index}
-                  painPoint={pp}
-                  categoryId={categoryId}
-                  industryId={industryId}
-                  t={t}
-                />
-              ))}
-            </div>
-          </div>
-
-          <button
-            className={styles.toggleButton}
-            onClick={onToggle}
-            aria-expanded={isExpanded}
-          >
-            {isExpanded ? `− ${t('showLess')}` : `+ ${t('showAll')} (${remainingPainPoints.length})`}
-          </button>
-        </>
-      )}
+      <div className={styles.detailPainPoints}>
+        {painPoints.map((pp, i) => (
+          <PainPointRow key={i} painPoint={pp} t={t} />
+        ))}
+      </div>
     </div>
   )
 }
 
-const CategoryFilter: React.FC<{
-  activeCategory: string
-  onChange: (id: string) => void
-}> = ({ activeCategory, onChange }) => {
+// ── Category Card (Level 1) ───────────────────────────────────────────────────
+
+const CategoryCard: React.FC<{
+  category: IndustryCategory
+  isActive: boolean
+  onSelect: () => void
+}> = ({ category, isActive, onSelect }) => {
   const { t } = useTranslation('industries')
 
   return (
-    <div className={styles.tabs} role="tablist">
-      <button
-        role="tab"
-        aria-selected={activeCategory === 'all'}
-        className={[styles.tab, activeCategory === 'all' ? styles['tab--active'] : ''].filter(Boolean).join(' ')}
-        onClick={() => onChange('all')}
-      >
-        {t('allIndustries')}
-      </button>
-      {industryCategories.map(cat => (
-        <button
-          key={cat.id}
-          role="tab"
-          aria-selected={activeCategory === cat.id}
-          className={[styles.tab, activeCategory === cat.id ? styles['tab--active'] : ''].filter(Boolean).join(' ')}
-          onClick={() => onChange(cat.id)}
-        >
-          <span>{cat.icon}</span>
-          {t(`${cat.id}.label`)}
-        </button>
-      ))}
-    </div>
+    <button
+      className={[styles.catCard, isActive ? styles['catCard--active'] : ''].filter(Boolean).join(' ')}
+      onClick={onSelect}
+      aria-expanded={isActive}
+      aria-pressed={isActive}
+    >
+      <span className={styles.catIcon}>{category.icon}</span>
+      <div className={styles.catCardText}>
+        <span className={styles.catCardTitle}>{t(`${category.id}.label`)}</span>
+        <span className={styles.catCardCount}>
+          {category.industries.length} {t('industriesCount')}
+        </span>
+      </div>
+      <span className={[styles.catArrow, isActive ? styles['catArrow--open'] : ''].filter(Boolean).join(' ')}>▾</span>
+    </button>
   )
 }
 
@@ -145,20 +81,17 @@ const CategoryFilter: React.FC<{
 
 export const IndustriesSection: React.FC = () => {
   const { t } = useTranslation('industries')
-  const [activeCategory, setActiveCategory] = useState<string>('all')
-  const [expandedCardId, setExpandedCardId] = useState<string | null>(null)
+  const [activeCategoryId, setActiveCategoryId] = useState<string | null>(null)
   const headerRef = useScrollAnimation({ y: 40 })
 
-  const visibleCategories: IndustryCategory[] = activeCategory === 'all'
-    ? industryCategories
-    : industryCategories.filter(c => c.id === activeCategory)
+  const activeCategory = industryCategories.find(c => c.id === activeCategoryId) ?? null
+
+  const handleSelect = (id: string) => {
+    setActiveCategoryId(prev => (prev === id ? null : id))
+  }
 
   const scrollToContact = () => {
     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const toggleCard = (cardId: string) => {
-    setExpandedCardId(prev => (prev === cardId ? null : cardId))
   }
 
   return (
@@ -170,34 +103,42 @@ export const IndustriesSection: React.FC = () => {
           <p className={styles.subline}>{t('subline')}</p>
         </div>
 
-        <CategoryFilter activeCategory={activeCategory} onChange={setActiveCategory} />
+        {/* Level 1: equal-size category cards */}
+        <div className={styles.categoryGrid}>
+          {industryCategories.map(category => (
+            <CategoryCard
+              key={category.id}
+              category={category}
+              isActive={activeCategoryId === category.id}
+              onSelect={() => handleSelect(category.id)}
+            />
+          ))}
+        </div>
 
-        {visibleCategories.map((category: IndustryCategory) => (
-          <div key={category.id} className={styles.categoryGroup}>
-            {activeCategory === 'all' && (
-              <h3 className={styles.categoryLabel}>
-                <span>{category.icon}</span>
-                {t(`${category.id}.label`)}
-              </h3>
-            )}
-            <div className={styles.grid}>
-              {category.industries.map(industry => {
-                const cardId = `${category.id}-${industry.id}`
-                return (
-                  <IndustryCard
+        {/* Level 2: expanded detail panel, shown below cards */}
+        <div
+          className={[styles.detailPanel, activeCategory ? styles['detailPanel--open'] : ''].filter(Boolean).join(' ')}
+          aria-hidden={!activeCategory}
+        >
+          {activeCategory && (
+            <div
+              className={styles.detailPanelInner}
+              style={{ '--industry-count': activeCategory.industries.length } as React.CSSProperties}
+            >
+              <div className={styles.detailGrid}>
+                {activeCategory.industries.map(industry => (
+                  <IndustryDetailCard
                     key={industry.id}
-                    categoryId={category.id}
+                    categoryId={activeCategory.id}
                     industryId={industry.id}
                     icon={industry.icon}
                     painPoints={industry.painPoints}
-                    isExpanded={expandedCardId === cardId}
-                    onToggle={() => toggleCard(cardId)}
                   />
-                )
-              })}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          )}
+        </div>
 
         <div className={styles.bottomCta}>
           <p className={styles.ctaText}>{t('ctaBottom')}</p>

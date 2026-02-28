@@ -8,6 +8,8 @@
   "allIndustries": "Alle Branchen",
   "showAll": "Alle anzeigen",
   "showLess": "Weniger anzeigen",
+  "clickToExplore": "Details anzeigen",
+  "industriesCount": "Branchen",
   "gastro": {
     "label": "Gastro & Genuss",
     "restaurant": {

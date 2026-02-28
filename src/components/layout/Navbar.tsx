@@ -38,7 +38,7 @@ export const Navbar: React.FC = () => {
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <a href="#" className={styles.logo} onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>
-          <span className="text-gradient">Growth</span>
+          <span className="text-gradient">Growth.</span>
         </a>
 
         {/* Desktop nav */}

@@ -8,6 +8,8 @@
   "allIndustries": "All Industries",
   "showAll": "Show all",
   "showLess": "Show less",
+  "clickToExplore": "Show details",
+  "industriesCount": "industries",
   "gastro": {
     "label": "Food & Hospitality",
     "restaurant": {

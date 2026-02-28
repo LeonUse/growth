@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, fireEvent, screen } from '@testing-library/react'
 import { I18nextProvider } from 'react-i18next'
 import React from 'react'
@@ -10,33 +10,59 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => (
 )
 
 describe('IndustriesSection', () => {
+  beforeEach(() => {
+    window.HTMLElement.prototype.scrollIntoView = vi.fn()
+  })
+
   it('renders correctly', () => {
     const { container } = render(<IndustriesSection />, { wrapper: Wrapper })
     expect(container.querySelector('#industries')).toBeInTheDocument()
   })
 
-  it('filters categories correctly', () => {
+  it('selects a category to show details and toggles it off', () => {
     const { container } = render(<IndustriesSection />, { wrapper: Wrapper })
     
-    // Change category to the second tab
-    const tabs = container.querySelectorAll('button[role="tab"]')
-    if (tabs.length > 1) {
-      fireEvent.click(tabs[1])
-      expect(tabs[1]).toHaveAttribute('aria-selected', 'true')
-    }
+    // Find all category buttons
+    const categoryButtons = container.querySelectorAll('button[aria-expanded]')
+    expect(categoryButtons.length).toBeGreaterThan(0)
+    
+    const firstCategoryBtn = categoryButtons[0]
+    expect(firstCategoryBtn).toHaveAttribute('aria-expanded', 'false')
+
+    // Click to open
+    fireEvent.click(firstCategoryBtn)
+    expect(firstCategoryBtn).toHaveAttribute('aria-expanded', 'true')
+
+    // Expect the detail panel to be shown (aria-hidden false)
+    const detailPanel = container.querySelector('[class*="detailPanel--open"]')
+    expect(detailPanel).toBeInTheDocument()
+    expect(detailPanel).toHaveAttribute('aria-hidden', 'false')
+
+    // Click again to close
+    fireEvent.click(firstCategoryBtn)
+    expect(firstCategoryBtn).toHaveAttribute('aria-expanded', 'false')
+    expect(container.querySelector('[class*="detailPanel--open"]')).not.toBeInTheDocument()
   })
 
-  it('toggles painpoint correctly', () => {
-    const { container } = render(<IndustriesSection />, { wrapper: Wrapper })
-    // get all toggle buttons (accordions)
-    const buttons = container.querySelectorAll('button[class*="painPointToggle"]')
-    if (buttons.length > 0) {
-      fireEvent.click(buttons[0])
-      expect(buttons[0]).toHaveAttribute('aria-expanded', 'true')
-      
-      // click again to close
-      fireEvent.click(buttons[0])
-      expect(buttons[0]).toHaveAttribute('aria-expanded', 'false')
-    }
+  it('scrolls to contact section when CTA is clicked', () => {
+    // Need to create a mock target in the document body so querySelector finds it
+    const mockTarget = document.createElement('div')
+    mockTarget.id = 'contact'
+    document.body.appendChild(mockTarget)
+
+    render(<IndustriesSection />, { wrapper: Wrapper })
+    
+    // Our button might have different translated text depending on Language.
+    // In English, it's something like "Let's talk". 
+    // We can find it by getting the button inside the bottom CTA container.
+    const buttons = screen.getAllByRole('button')
+    // The CTA button is likely the last button as it is at the bottom
+    const ctaBtn = buttons[buttons.length - 1]
+    
+    fireEvent.click(ctaBtn)
+    expect(window.HTMLElement.prototype.scrollIntoView).toHaveBeenCalledWith({ behavior: 'smooth' })
+
+    // Cleanup
+    document.body.removeChild(mockTarget)
   })
 })
