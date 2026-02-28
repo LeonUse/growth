@@ -1,0 +1,43 @@
+{
+  "headline": "Who we are & how we work",
+  "subline": "We build websites that deliver results — with modern technologies and real craftsmanship.",
+  "mission": "Our Mission",
+  "missionText": "We believe every local business deserves a professional online presence — without overpriced agencies and without compromising on quality.",
+  "process": "Our Process",
+  "steps": {
+    "1": {
+      "title": "Consultation",
+      "desc": "We understand your business, your goals and your target audience."
+    },
+    "2": {
+      "title": "Design",
+      "desc": "A tailor-made design that perfectly reflects your brand."
+    },
+    "3": {
+      "title": "Development",
+      "desc": "Performant, accessible development with the latest technologies."
+    },
+    "4": {
+      "title": "Launch",
+      "desc": "On-time launch, thorough testing and full support afterwards."
+    }
+  },
+  "tech": "Our Technologies",
+  "techSubline": "We build on proven, modern tools — for maximum performance and future-proofing.",
+  "testimonials": "What our clients say",
+  "t1": {
+    "name": "Maria S.",
+    "role": "Owner, Café Sonnenschein",
+    "text": "Since the new website we have 40% more online reservations. The process was straightforward and the result exceeded our expectations."
+  },
+  "t2": {
+    "name": "Thomas K.",
+    "role": "Electrician, TK Electro",
+    "text": "Finally found on Google! Within 3 months I had 5 new major contracts directly through the website."
+  },
+  "t3": {
+    "name": "Anna M.",
+    "role": "Coach & Consultant",
+    "text": "Professional, fast and affordable. My website now perfectly reflects what I offer my clients."
+  }
+}

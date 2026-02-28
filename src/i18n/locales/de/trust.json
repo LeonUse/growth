@@ -1,0 +1,43 @@
+{
+  "headline": "Wer wir sind & wie wir arbeiten",
+  "subline": "Wir bauen Websites, die Ergebnisse liefern — mit modernen Technologien und echtem Handwerk.",
+  "mission": "Unsere Mission",
+  "missionText": "Wir glauben, dass jede lokale Geschäft das Recht auf eine professionelle Online-Präsenz hat — ohne überteuerte Agenturen und ohne Kompromisse bei der Qualität.",
+  "process": "Unser Prozess",
+  "steps": {
+    "1": {
+      "title": "Erstberatung",
+      "desc": "Wir verstehen dein Business, deine Ziele und deine Zielgruppe."
+    },
+    "2": {
+      "title": "Design",
+      "desc": "Ein maßgeschneidertes Design, das deine Marke perfekt widerspiegelt."
+    },
+    "3": {
+      "title": "Entwicklung",
+      "desc": "Performante, barrierefreie Entwicklung mit modernsten Technologien."
+    },
+    "4": {
+      "title": "Launch",
+      "desc": "Pünktlicher Launch, ausgiebige Tests und voller Support danach."
+    }
+  },
+  "tech": "Unsere Technologien",
+  "techSubline": "Wir bauen auf bewährte, moderne Tools — für maximale Performance und Zukunftssicherheit.",
+  "testimonials": "Was unsere Kunden sagen",
+  "t1": {
+    "name": "Maria S.",
+    "role": "Inhaberin, Café Sonnenschein",
+    "text": "Seit der neuen Website haben wir 40% mehr Online-Reservierungen. Der Prozess war unkompliziert und das Ergebnis hat unsere Erwartungen übertroffen."
+  },
+  "t2": {
+    "name": "Thomas K.",
+    "role": "Elektriker, TK Elektro",
+    "text": "Endlich werde ich bei Google gefunden! Innerhalb von 3 Monaten hatte ich 5 neue Großaufträge direkt über die Website."
+  },
+  "t3": {
+    "name": "Anna M.",
+    "role": "Coach & Beraterin",
+    "text": "Professionell, schnell und erschwinglich. Meine Website spiegelt jetzt genau das wider, was ich meinen Kunden biete."
+  }
+}

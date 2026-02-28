@@ -1,0 +1,271 @@
+{
+  "headline": "The right solution for every industry",
+  "subline": "Find your industry and discover how a professional website solves your biggest challenges.",
+  "ctaBottom": "Your industry not listed? Contact us — we'll find the perfect solution.",
+  "ctaBtn": "Get a quote",
+  "problemLabel": "Problem",
+  "solutionLabel": "Solution",
+  "allIndustries": "All Industries",
+  "showAll": "Show all",
+  "showLess": "Show less",
+  "gastro": {
+    "label": "Food & Hospitality",
+    "restaurant": {
+      "name": "Restaurant",
+      "tagline": "More tables, more revenue — reachable 24/7 for your guests",
+      "p1": {
+        "problem": "Customers can't find opening hours and menu fast enough",
+        "solution": "Digital menu, location and opening hours always up to date"
+      },
+      "p2": {
+        "problem": "Phone reservations get lost or come outside opening hours",
+        "solution": "24/7 online table reservation with automatic email confirmation"
+      },
+      "p3": {
+        "problem": "No online ordering → revenue from delivery/takeaway is lost",
+        "solution": "Online ordering system for take-away and delivery"
+      },
+      "p4": {
+        "problem": "No photos or reviews online → loss of trust with new customers",
+        "solution": "Gallery, customer reviews and atmosphere insights on the website"
+      }
+    },
+    "cafe": {
+      "name": "Café & Bar",
+      "tagline": "Fill events — with a website that conveys atmosphere",
+      "p1": {
+        "problem": "Events and seasonal offers only reach regular customers",
+        "solution": "Event calendar and news section for current promotions"
+      },
+      "p2": {
+        "problem": "No professional first impression online → less foot traffic",
+        "solution": "Atmospheric website with gallery and atmosphere photos"
+      },
+      "p3": {
+        "problem": "Social media alone isn't enough for Google discoverability",
+        "solution": "SEO-optimized website with Google Maps integration"
+      }
+    },
+    "bakery": {
+      "name": "Bakery & Patisserie",
+      "tagline": "Pre-orders and more reach — without extra working time",
+      "p1": {
+        "problem": "Customers don't know about branch locations or opening hours",
+        "solution": "Branch overview with locations, opening hours and directions"
+      },
+      "p2": {
+        "problem": "Seasonal products aren't advertised sufficiently",
+        "solution": "Product catalog with seasonal highlights and pre-ordering"
+      },
+      "p3": {
+        "problem": "Pre-orders for cakes/catering only via phone",
+        "solution": "Online pre-order form for cakes, catering and bulk orders"
+      }
+    }
+  },
+  "retail": {
+    "label": "Retail & Commerce",
+    "boutique": {
+      "name": "Boutique & Retail",
+      "tagline": "Locally discoverable, unmistakably online",
+      "p1": {
+        "problem": "Local customers don't know the shop exists",
+        "solution": "Local SEO strategy with Google visibility and review integration"
+      },
+      "p2": {
+        "problem": "No online shop → revenue limited to physical store",
+        "solution": "Online shop with click & collect or shipping option"
+      },
+      "p3": {
+        "problem": "Promotions and new arrivals only reach existing customers",
+        "solution": "Newsletter integration and news section for updates"
+      },
+      "p4": {
+        "problem": "No unique selling point visible against Amazon",
+        "solution": "Brand presence with story, values and unique assortment"
+      }
+    },
+    "florist": {
+      "name": "Florist",
+      "tagline": "Make seasonal highlights visible — online and in-store",
+      "p1": {
+        "problem": "Seasonal offers (Valentine's Day, Mother's Day) not visible in time",
+        "solution": "Seasonal landing pages and pre-order functionality"
+      },
+      "p2": {
+        "problem": "No online ordering system for bouquets and delivery",
+        "solution": "Product catalog with ordering and delivery option"
+      },
+      "p3": {
+        "problem": "Wedding floristry isn't presented professionally",
+        "solution": "Portfolio section for weddings and events with gallery"
+      }
+    },
+    "wine": {
+      "name": "Wine & Fine Foods",
+      "tagline": "More reach, more tasting experiences — bookable online",
+      "p1": {
+        "problem": "Assortment can't be searched or compared online",
+        "solution": "Searchable product catalog with filters"
+      },
+      "p2": {
+        "problem": "No online shop → customer base limited to local visitors",
+        "solution": "Online shop with shipping and age verification"
+      },
+      "p3": {
+        "problem": "Wine tastings and events only promoted by word of mouth",
+        "solution": "Event calendar with online registration for tastings"
+      }
+    }
+  },
+  "services": {
+    "label": "Services & Consulting",
+    "handwerk": {
+      "name": "Tradespeople",
+      "tagline": "New contracts through local Google visibility",
+      "p1": {
+        "problem": "Not found on Google → contracts go to competitors with websites",
+        "solution": "SEO-optimized website with service overview and coverage area"
+      },
+      "p2": {
+        "problem": "Callbacks and appointment requests get lost when fully booked",
+        "solution": "Contact form and online appointment request with automatic confirmation"
+      },
+      "p3": {
+        "problem": "No visible references → customers rely on word of mouth",
+        "solution": "Reference gallery with before/after photos and customer reviews"
+      },
+      "p4": {
+        "problem": "Time-consuming quote creation via phone costs working time",
+        "solution": "Quote request form with pre-built service checklists"
+      }
+    },
+    "legal": {
+      "name": "Lawyers & Accountants",
+      "tagline": "Communicate professionalism and expertise at first glance",
+      "p1": {
+        "problem": "New clients search online — firms without websites seem unprofessional",
+        "solution": "Professional presence with competency profiles and practice areas"
+      },
+      "p2": {
+        "problem": "First contact only possible by phone → barrier for potential clients",
+        "solution": "Online contact form and booking reduces the barrier"
+      },
+      "p3": {
+        "problem": "Expertise isn't communicated visibly",
+        "solution": "Blog/advice section strengthens expertise (E-E-A-T)"
+      }
+    },
+    "coach": {
+      "name": "Coaches & Freelancers",
+      "tagline": "Your own channel instead of platform dependency",
+      "p1": {
+        "problem": "Dependent on platforms (LinkedIn) — no own channel",
+        "solution": "Own website as central hub for visibility and leads"
+      },
+      "p2": {
+        "problem": "Portfolio only available as PDF or in conversation",
+        "solution": "Professional portfolio page with projects and testimonials"
+      },
+      "p3": {
+        "problem": "Appointment scheduling via email = endless back-and-forth",
+        "solution": "Integrated appointment booking directly on the website"
+      },
+      "p4": {
+        "problem": "No clear positioning → indistinguishable from thousands of others",
+        "solution": "Branding website with clear value proposition"
+      }
+    },
+    "realestate": {
+      "name": "Real Estate Agents",
+      "tagline": "Own brand instead of portal dependency",
+      "p1": {
+        "problem": "Property presentation only via portals → no own brand",
+        "solution": "Own property gallery with exposés and contact form"
+      },
+      "p2": {
+        "problem": "Leads only through expensive portal listings",
+        "solution": "SEO-optimized website generates organic inquiries"
+      },
+      "p3": {
+        "problem": "No central place for reviews and references",
+        "solution": "Success stories and client testimonials as trust signals"
+      }
+    }
+  },
+  "health": {
+    "label": "Health & Lifestyle",
+    "doctor": {
+      "name": "Doctors & Practices",
+      "tagline": "Online booking relieves reception staff and patients",
+      "p1": {
+        "problem": "Patients can't find current info on opening hours and services",
+        "solution": "Clear practice website with service spectrum and hours"
+      },
+      "p2": {
+        "problem": "Only reachable by phone during consultation hours → frustration",
+        "solution": "Online appointment booking relieves reception and patients"
+      },
+      "p3": {
+        "problem": "New patients compare practices online — no chance without website",
+        "solution": "Professional online presence with team and practice photos"
+      },
+      "p4": {
+        "problem": "Forms (anamnesis) only on-site → long wait times",
+        "solution": "Digital forms to fill in advance on the website"
+      }
+    },
+    "physio": {
+      "name": "Physiotherapy & Wellness",
+      "tagline": "Relaxation begins on the website",
+      "p1": {
+        "problem": "Customers don't know which treatments are offered",
+        "solution": "Clear service page with explanations and prices"
+      },
+      "p2": {
+        "problem": "Appointments only by phone → customers book elsewhere online",
+        "solution": "Online booking system with therapist and time slot selection"
+      },
+      "p3": {
+        "problem": "The relaxing atmosphere isn't communicated",
+        "solution": "Atmospheric website with gallery and ambient photos"
+      }
+    },
+    "fitness": {
+      "name": "Gym & Sports",
+      "tagline": "Win new members and retain existing ones",
+      "p1": {
+        "problem": "Class schedule changes constantly → members miss updates",
+        "solution": "Digital class schedule, always current, filterable by class/trainer"
+      },
+      "p2": {
+        "problem": "Trial training inquiries only by phone or walk-in",
+        "solution": "Online registration for trial sessions"
+      },
+      "p3": {
+        "problem": "Membership models aren't communicated transparently",
+        "solution": "Clear pricing page with comparison and online sign-up"
+      },
+      "p4": {
+        "problem": "Community and success stories aren't shown",
+        "solution": "Member testimonials and event gallery as motivation"
+      }
+    },
+    "beauty": {
+      "name": "Beauty & Hair",
+      "tagline": "Book professionally, inquire easily",
+      "p1": {
+        "problem": "Appointments only via phone or WhatsApp — unstructured",
+        "solution": "Professional online booking system with confirmation"
+      },
+      "p2": {
+        "problem": "Services and prices not transparent → customers hesitate",
+        "solution": "Clear price list with all treatments and options"
+      },
+      "p3": {
+        "problem": "Portfolio only on Instagram → short-lived",
+        "solution": "Permanent gallery on the website as a showcase"
+      }
+    }
+  }
+}

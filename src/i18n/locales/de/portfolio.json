@@ -1,0 +1,37 @@
+{
+  "headline": "Unsere Arbeiten",
+  "subline": "Jede Website erzählt eine Geschichte. Hier sind einige davon.",
+  "filter": {
+    "all": "Alle",
+    "gastro": "Gastro",
+    "retail": "Handel",
+    "health": "Gesundheit",
+    "services": "Dienstleistung"
+  },
+  "comingSoon": "Bald verfügbar",
+  "viewProject": "Ansehen",
+  "p1": {
+    "title": "Ristorante La Bella",
+    "industry": "Restaurant"
+  },
+  "p2": {
+    "title": "Boutique Maison",
+    "industry": "Modeboutique"
+  },
+  "p3": {
+    "title": "Praxis Dr. Müller",
+    "industry": "Arztpraxis"
+  },
+  "p4": {
+    "title": "Handwerk Schneider",
+    "industry": "Elektriker"
+  },
+  "p5": {
+    "title": "Café am See",
+    "industry": "Café & Bar"
+  },
+  "p6": {
+    "title": "Grünes Feld Bio",
+    "industry": "Feinkost"
+  }
+}

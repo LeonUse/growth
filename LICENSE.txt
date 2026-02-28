@@ -1,0 +1,7 @@
+Copyright (c) 2026 Leon Braun
+
+All rights reserved.
+
+This repository and its contents are the intellectual property of Leon Braun.
+No permission is granted to use, copy, modify, distribute, or sublicense this code
+without explicit written consent.

@@ -1,0 +1,247 @@
+.industries {
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.header h2 {
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  margin-bottom: var(--space-4);
+}
+
+.subline {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 56ch;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
+/* ── Category Tabs ─────────────────────────────────────────── */
+
+.tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-12);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--dur-normal) var(--ease-out);
+  font-family: var(--font-body);
+}
+
+.tab:hover {
+  color: var(--color-text);
+  border-color: var(--color-border-accent);
+}
+
+.tab--active {
+  color: var(--color-accent);
+  background: var(--color-accent-dim);
+  border-color: var(--color-border-accent);
+}
+
+/* ── Category Group & Grid ─────────────────────────────────── */
+
+.categoryGroup {
+  margin-bottom: var(--space-12);
+}
+
+.categoryLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-6);
+  color: var(--color-text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-4);
+  align-items: start;
+}
+
+/* ── Industry Card ─────────────────────────────────────────── */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: border-color var(--dur-normal) var(--ease-out), box-shadow var(--dur-normal) var(--ease-out);
+  min-height: 240px;
+}
+
+.card:hover {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card--expanded {
+  border-color: var(--color-border-accent);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: var(--text-xl);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-1);
+}
+
+.cardTagline {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Pain Point Preview (always visible) ───────────────────── */
+
+.previewPainPoint {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+  margin-top: auto;
+  opacity: 0.8;
+}
+
+/* ── Expanded Pain Points (smooth slide-open) ──────────────── */
+
+.expandedPainPoints {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.45s var(--ease-out);
+}
+
+.expandedPainPoints--open {
+  max-height: 800px;
+}
+
+.expandedPainPointsInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+/* ── Toggle Button ─────────────────────────────────────────── */
+
+.toggleButton {
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  font-weight: var(--fw-medium);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-3) 0 0;
+  font-family: var(--font-body);
+  text-align: left;
+  transition: opacity var(--dur-fast);
+}
+
+.toggleButton:hover {
+  opacity: 0.75;
+}
+
+/* ── Pain Point Row ────────────────────────────────────────── */
+
+.painPoint {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.problem,
+.solution {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.problemIcon {
+  color: #ef4444;
+  font-weight: var(--fw-bold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.solutionIcon {
+  color: #22c55e;
+  font-weight: var(--fw-bold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.problem {
+  color: var(--color-text-muted);
+}
+
+.solution {
+  color: var(--color-text);
+}
+
+/* ── Bottom CTA ────────────────────────────────────────────── */
+
+.bottomCta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-16);
+  padding: var(--space-12);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.ctaText {
+  font-size: var(--text-xl);
+  color: var(--color-text-muted);
+  max-width: 56ch;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

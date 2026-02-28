@@ -1,0 +1,34 @@
+{
+  "headline": "Ready for your new website?",
+  "subline": "Free initial consultation — no obligation, personal, within 24 hours.",
+  "form": {
+    "name": "Your Name",
+    "email": "Your Email Address",
+    "company": "Your Company (optional)",
+    "industry": "Your Industry",
+    "budget": "Budget Range",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": "Thank you! We'll get back to you within 24 hours.",
+    "error": "Something went wrong. Please try again.",
+    "budgetOptions": {
+      "starter": "Under €500",
+      "professional": "€500 – €1,000",
+      "enterprise": "€1,000 – €2,000",
+      "custom": "Over €2,000",
+      "unknown": "Not sure yet"
+    },
+    "industryOptions": {
+      "gastro": "Hospitality",
+      "retail": "Retail & Commerce",
+      "services": "Services",
+      "health": "Health & Wellness",
+      "other": "Other"
+    }
+  },
+  "alternative": "Or contact us directly",
+  "phone": "+49 (0) 123 456 789",
+  "emailAddr": "hello@webdesign-studio.de",
+  "hook": "Free Initial Consultation"
+}

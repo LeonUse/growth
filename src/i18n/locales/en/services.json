@@ -1,0 +1,147 @@
+{
+  "headline": "Transparent pricing, modular add-ons.",
+  "subline": "Start with a base package and expand as needed — no hidden costs.",
+  "popular": "Most Popular",
+  "from": "from",
+  "cta": "Get a quote",
+  "addonsHeadline": "Add-On Modules",
+  "addonsSubline": "Extend your package with industry-specific features.",
+  "packages": {
+    "starter": {
+      "name": "Starter",
+      "tagline": "The perfect starting point",
+      "f1": "Static website (1–5 pages)",
+      "f2": "Responsive design (Mobile-First)",
+      "f3": "Basic SEO optimization",
+      "f4": "Contact form",
+      "f5": "Imprint & Privacy policy",
+      "f6": "SSL certificate",
+      "f7": "1 revision"
+    },
+    "professional": {
+      "name": "Professional",
+      "tagline": "For growing businesses",
+      "f1": "Everything in Starter",
+      "f2": "Up to 10 pages",
+      "f3": "Animations & scroll effects",
+      "f4": "Blog / news section",
+      "f5": "Google Maps integration",
+      "f6": "Social media links",
+      "f7": "Basic analytics setup",
+      "f8": "3 revisions"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "tagline": "Premium without compromise",
+      "f1": "Everything in Professional",
+      "f2": "Unlimited pages",
+      "f3": "Custom design system",
+      "f4": "CMS (Content Management)",
+      "f5": "Multilingual (i18n)",
+      "f6": "Performance optimization (Core Web Vitals)",
+      "f7": "Advanced SEO strategy",
+      "f8": "Priority support",
+      "f9": "5 revisions"
+    }
+  },
+  "addons": {
+    "gastro": {
+      "label": "Hospitality",
+      "reservation": {
+        "name": "Table Reservation",
+        "desc": "Online reservation system with calendar, email confirmation, table management"
+      },
+      "order": {
+        "name": "Order System",
+        "desc": "Online ordering with menu, shopping cart, order confirmation"
+      },
+      "menu": {
+        "name": "Digital Menu",
+        "desc": "Interactive menu with filters (vegan, allergens), QR code ready"
+      }
+    },
+    "ecommerce": {
+      "label": "E-Commerce & Shops",
+      "shopBasic": {
+        "name": "Online Shop (Basic)",
+        "desc": "Product catalog, shopping cart, checkout, payment integration (Stripe/PayPal)"
+      },
+      "shopAdvanced": {
+        "name": "Online Shop (Advanced)",
+        "desc": "+ Inventory management, coupon system, customer account, order history"
+      },
+      "clickcollect": {
+        "name": "Click & Collect",
+        "desc": "Order online, pick up in store — perfect for local businesses"
+      }
+    },
+    "booking": {
+      "label": "Booking & Appointments",
+      "appointment": {
+        "name": "Appointment Booking",
+        "desc": "Calendar-based appointment scheduling with automatic confirmation"
+      },
+      "course": {
+        "name": "Course Booking System",
+        "desc": "Courses/events with participant management and waitlist"
+      }
+    },
+    "marketing": {
+      "label": "Communication & Marketing",
+      "chat": {
+        "name": "Live Chat",
+        "desc": "Real-time customer service directly on the website"
+      },
+      "newsletter": {
+        "name": "Newsletter System",
+        "desc": "Email marketing with signup, templates, and automation"
+      },
+      "reviews": {
+        "name": "Review System",
+        "desc": "Collect and display customer reviews (social proof)"
+      },
+      "social": {
+        "name": "Social Media Feed",
+        "desc": "Instagram/Facebook/TikTok feed embedded"
+      }
+    },
+    "tech": {
+      "label": "Tech & Performance",
+      "seo": {
+        "name": "Advanced SEO",
+        "desc": "Keyword analysis, technical SEO, structured data"
+      },
+      "analytics": {
+        "name": "Analytics Dashboard",
+        "desc": "Google Analytics 4 + custom reporting dashboard"
+      },
+      "wcag": {
+        "name": "Accessibility (WCAG)",
+        "desc": "WCAG 2.2 AA compliant accessibility audit and implementation"
+      },
+      "i18n": {
+        "name": "Multilingual",
+        "desc": "i18n integration with language switcher"
+      },
+      "cookie": {
+        "name": "Cookie Consent",
+        "desc": "GDPR-compliant cookie banner with consent management"
+      }
+    },
+    "maintenance": {
+      "label": "Maintenance & Support",
+      "basic": {
+        "name": "Maintenance Plan",
+        "desc": "Hosting, updates, backups, security monitoring"
+      },
+      "performance": {
+        "name": "Performance Plan",
+        "desc": "Maintenance + monthly performance reporting"
+      },
+      "priority": {
+        "name": "Priority Support",
+        "desc": "Preferred handling, faster response times"
+      }
+    }
+  }
+}

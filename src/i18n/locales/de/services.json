@@ -1,0 +1,147 @@
+{
+  "headline": "Transparente Preise, modulare Bausteine.",
+  "subline": "Starte mit einem Basis-Paket und erweitere nach Bedarf — ohne versteckte Kosten.",
+  "popular": "Beliebteste Wahl",
+  "from": "ab",
+  "cta": "Jetzt anfragen",
+  "addonsHeadline": "Add-On Bausteine",
+  "addonsSubline": "Erweitere dein Paket mit branchenspezifischen Funktionen.",
+  "packages": {
+    "starter": {
+      "name": "Starter",
+      "tagline": "Der perfekte Einstieg",
+      "f1": "Statische Website (1–5 Seiten)",
+      "f2": "Responsives Design (Mobile-First)",
+      "f3": "SEO-Grundoptimierung",
+      "f4": "Kontaktformular",
+      "f5": "Impressum & Datenschutz",
+      "f6": "SSL-Zertifikat",
+      "f7": "1 Revision"
+    },
+    "professional": {
+      "name": "Professional",
+      "tagline": "Für wachsende Unternehmen",
+      "f1": "Alles aus Starter",
+      "f2": "Bis zu 10 Seiten",
+      "f3": "Animationen & Scroll-Effekte",
+      "f4": "Blog / News-Bereich",
+      "f5": "Google Maps Integration",
+      "f6": "Social Media Verlinkung",
+      "f7": "Basis-Analytics-Setup",
+      "f8": "3 Revisionen"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "tagline": "Premium ohne Kompromisse",
+      "f1": "Alles aus Professional",
+      "f2": "Unbegrenzte Seiten",
+      "f3": "Custom Design System",
+      "f4": "CMS (Content Management)",
+      "f5": "Mehrsprachig (i18n)",
+      "f6": "Performance-Optimierung (Core Web Vitals)",
+      "f7": "Erweiterte SEO-Strategie",
+      "f8": "Priority Support",
+      "f9": "5 Revisionen"
+    }
+  },
+  "addons": {
+    "gastro": {
+      "label": "Gastronomie",
+      "reservation": {
+        "name": "Tischreservierung",
+        "desc": "Online-Reservierungssystem mit Kalender, E-Mail-Bestätigung, Tischverwaltung"
+      },
+      "order": {
+        "name": "Bestell-System",
+        "desc": "Online-Bestellung mit Speisekarte, Warenkorb, Bestellbestätigung"
+      },
+      "menu": {
+        "name": "Digitale Speisekarte",
+        "desc": "Interaktive Karte mit Filtern (vegan, Allergene), QR-Code-Ready"
+      }
+    },
+    "ecommerce": {
+      "label": "E-Commerce & Shops",
+      "shopBasic": {
+        "name": "Online-Shop (Basis)",
+        "desc": "Produktkatalog, Warenkorb, Checkout, Zahlungsintegration (Stripe/PayPal)"
+      },
+      "shopAdvanced": {
+        "name": "Online-Shop (Erweitert)",
+        "desc": "+ Lagerverwaltung, Gutschein-System, Kundenkonto, Bestellverlauf"
+      },
+      "clickcollect": {
+        "name": "Click & Collect",
+        "desc": "Online bestellen, vor Ort abholen — perfekt für lokale Geschäfte"
+      }
+    },
+    "booking": {
+      "label": "Buchung & Termine",
+      "appointment": {
+        "name": "Terminbuchung",
+        "desc": "Kalender-basierte Terminvergabe mit automatischer Bestätigung"
+      },
+      "course": {
+        "name": "Kurs-Buchungssystem",
+        "desc": "Kurse/Events mit Teilnehmerverwaltung und Warteliste"
+      }
+    },
+    "marketing": {
+      "label": "Kommunikation & Marketing",
+      "chat": {
+        "name": "Live-Chat",
+        "desc": "Echtzeit-Kundenservice direkt auf der Website"
+      },
+      "newsletter": {
+        "name": "Newsletter-System",
+        "desc": "E-Mail-Marketing mit Anmeldung, Templates und Automatisierung"
+      },
+      "reviews": {
+        "name": "Bewertungssystem",
+        "desc": "Kundenbewertungen sammeln und anzeigen (Social Proof)"
+      },
+      "social": {
+        "name": "Social Media Feed",
+        "desc": "Instagram/Facebook/TikTok Feed eingebunden"
+      }
+    },
+    "tech": {
+      "label": "Technik & Performance",
+      "seo": {
+        "name": "Erweiterte SEO",
+        "desc": "Keyword-Analyse, technisches SEO, Strukturierte Daten"
+      },
+      "analytics": {
+        "name": "Analytics Dashboard",
+        "desc": "Google Analytics 4 + individuelles Reporting-Dashboard"
+      },
+      "wcag": {
+        "name": "Barrierefreiheit (WCAG)",
+        "desc": "WCAG 2.2 AA konformes Accessibility-Audit und Umsetzung"
+      },
+      "i18n": {
+        "name": "Mehrsprachigkeit",
+        "desc": "i18n-Integration mit Sprachwechsler"
+      },
+      "cookie": {
+        "name": "Cookie Consent",
+        "desc": "DSGVO-konformes Cookie-Banner mit Consent Management"
+      }
+    },
+    "maintenance": {
+      "label": "Wartung & Support",
+      "basic": {
+        "name": "Wartungspaket",
+        "desc": "Hosting, Updates, Backups, Security-Monitoring"
+      },
+      "performance": {
+        "name": "Performance-Paket",
+        "desc": "Wartung + monatliches Performance-Reporting"
+      },
+      "priority": {
+        "name": "Priority Support",
+        "desc": "Bevorzugte Bearbeitung, schnellere Reaktionszeiten"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "headline": "Bereit für deine neue Website?",
+  "subline": "Kostenlose Erstberatung — unverbindlich, persönlich, innerhalb von 24 Stunden.",
+  "form": {
+    "name": "Ihr Name",
+    "email": "Ihre E-Mail-Adresse",
+    "company": "Ihr Unternehmen (optional)",
+    "industry": "Ihre Branche",
+    "budget": "Budget-Vorstellung",
+    "message": "Ihre Nachricht",
+    "submit": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "success": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "budgetOptions": {
+      "starter": "Unter 500 €",
+      "professional": "500 – 1.000 €",
+      "enterprise": "1.000 – 2.000 €",
+      "custom": "Über 2.000 €",
+      "unknown": "Noch nicht sicher"
+    },
+    "industryOptions": {
+      "gastro": "Gastronomie",
+      "retail": "Handel & Retail",
+      "services": "Dienstleistung",
+      "health": "Gesundheit & Wellness",
+      "other": "Sonstiges"
+    }
+  },
+  "alternative": "Oder direkt kontaktieren",
+  "phone": "+49 (0) 123 456 789",
+  "emailAddr": "hallo@webdesign-studio.de",
+  "hook": "Kostenlose Erstberatung"
+}

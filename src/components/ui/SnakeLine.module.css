@@ -1,0 +1,39 @@
+/* ── Container ───────────────────────────────────────────────────────────────
+   ABSOLUTE, not fixed — this spans the full document height so the path
+   maps to real section positions on the page.
+───────────────────────────────────────────────────────────────────────────── */
+.snakeLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height is set inline from JS (= document height) */
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Path ────────────────────────────────────────────────────────────────────
+   Thick stroke, gold glow, smooth offset transition.
+   stroke-dasharray / stroke-dashoffset are set inline by the component.
+───────────────────────────────────────────────────────────────────────────── */
+.path {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 10px var(--color-accent-glow));
+  /* No CSS transition — rAF loop drives dashoffset directly on the DOM */
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .snakeLine {
+    display: none;
+  }
+}

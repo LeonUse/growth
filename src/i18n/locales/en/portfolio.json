@@ -1,0 +1,37 @@
+{
+  "headline": "Our Work",
+  "subline": "Every website tells a story. Here are some of them.",
+  "filter": {
+    "all": "All",
+    "gastro": "Hospitality",
+    "retail": "Retail",
+    "health": "Health",
+    "services": "Services"
+  },
+  "comingSoon": "Coming soon",
+  "viewProject": "View",
+  "p1": {
+    "title": "Ristorante La Bella",
+    "industry": "Restaurant"
+  },
+  "p2": {
+    "title": "Boutique Maison",
+    "industry": "Fashion Boutique"
+  },
+  "p3": {
+    "title": "Dr. Müller Practice",
+    "industry": "Medical Practice"
+  },
+  "p4": {
+    "title": "Handwerk Schneider",
+    "industry": "Electrician"
+  },
+  "p5": {
+    "title": "Café am See",
+    "industry": "Café & Bar"
+  },
+  "p6": {
+    "title": "Grünes Feld Bio",
+    "industry": "Fine Foods"
+  }
+}

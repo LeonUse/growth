@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "why": "Why a Website?",
+    "industries": "Industries",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Get a Quote"
+  },
+  "footer": {
+    "tagline": "Professional websites for local businesses.",
+    "links": "Links",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "social": "Social Media",
+    "copyright": "© {{year}} Vitrin. All rights reserved.",
+    "madeWith": "Built with ❤️ and React"
+  },
+  "btn": {
+    "learnMore": "Learn more",
+    "contact": "Get in touch",
+    "free": "Free consultation"
+  }
+}
