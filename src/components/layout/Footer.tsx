@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
         {/* Brand */}
         <div className={styles.brand}>
           <div className={styles.logo}>
-            <span className="text-gradient">Vitrin</span>
+            <span className="text-gradient">Growth</span>
           </div>
           <p className={styles.tagline}>{t('footer.tagline')}</p>
           <div className={styles.tech}>
