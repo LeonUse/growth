@@ -47,8 +47,6 @@ export const SnakeLine: React.FC = () => {
   const pathRef = useRef<SVGPathElement>(null)
   // Store total path length; 0 means not yet measured
   const totalLengthRef = useRef(0)
-  // One-directional: max progress reached so far
-  const maxProgressRef = useRef(0)
   // rAF handle for cleanup
   const rafRef = useRef<number>(0)
 
@@ -68,11 +66,8 @@ export const SnakeLine: React.FC = () => {
     const docHeight = document.body.scrollHeight
     const fraction = docHeight > 0 ? Math.min(1, viewportCenter / docHeight) : 0
 
-    // One-directional: never retract
-    maxProgressRef.current = Math.max(maxProgressRef.current, fraction)
-
     // Directly set the DOM attribute — bypasses React, always in sync
-    path.style.strokeDashoffset = String(len * (1 - maxProgressRef.current))
+    path.style.strokeDashoffset = String(len * (1 - fraction))
   }, [])
 
   // ── rAF loop: runs every frame, always in sync with Lenis ──────────────────
@@ -146,9 +141,7 @@ export const SnakeLine: React.FC = () => {
       const len = pathRef.current.getTotalLength()
       totalLengthRef.current = len
       pathRef.current.style.strokeDasharray = String(len)
-      // Re-apply current progress fraction to new path length so the line
-      // doesn't jump after the page height changes (e.g. panel expand).
-      pathRef.current.style.strokeDashoffset = String(len * (1 - maxProgressRef.current))
+      // The rAF loop will immediately update strokeDashoffset
     }
   }, [pathData])
 

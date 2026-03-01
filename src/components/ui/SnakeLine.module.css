@@ -31,8 +31,8 @@
   /* No CSS transition — rAF loop drives dashoffset directly on the DOM */
 }
 
-/* ── Mobile ──────────────────────────────────────────────────────────────── */
-@media (max-width: 768px) {
+/* ── Laptop and smaller ──────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
   .snakeLine {
     display: none;
   }

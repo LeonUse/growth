@@ -28,7 +28,7 @@ export const packages: PricingPackage[] = [
   {
     id: 'starter',
     popular: false,
-    price: 149,
+    price: 249,
     featuresKey: [
       'packages.starter.f1',
       'packages.starter.f2',
@@ -40,7 +40,7 @@ export const packages: PricingPackage[] = [
   {
     id: 'professional',
     popular: true,
-    price: 399,
+    price: 599,
     featuresKey: [
       'packages.professional.f1',
       'packages.professional.f2',
@@ -53,7 +53,7 @@ export const packages: PricingPackage[] = [
   {
     id: 'enterprise',
     popular: false,
-    price: 699,
+    price: 999,
     featuresKey: [
       'packages.enterprise.f1',
       'packages.enterprise.f2',
@@ -131,7 +131,7 @@ export const addonCategories: AddonCategory[] = [
     id: 'maintenance',
     labelKey: 'addons.maintenance.label',
     items: [
-      { icon: '🛡️', nameKey: 'addons.maintenance.basic.name',   price: 'ab 29 €/Mo',  descKey: 'addons.maintenance.basic.desc' },
+      { icon: '🛡️', nameKey: 'addons.maintenance.basic.name',   price: 'ab 39 €/Mo',  descKey: 'addons.maintenance.basic.desc' },
       { icon: '🚀', nameKey: 'addons.maintenance.performance.name', price: 'ab 49 €/Mo', descKey: 'addons.maintenance.performance.desc' },
       { icon: '📞', nameKey: 'addons.maintenance.priority.name', price: 'ab 15 €/Mo', descKey: 'addons.maintenance.priority.desc' },
     ],

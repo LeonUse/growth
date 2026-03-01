@@ -8,6 +8,13 @@
   padding-top: 80px; /* navbar height */
 }
 
+@media (max-width: 768px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 130px;
+  }
+}
+
 .bg {
   position: absolute;
   inset: 0;
@@ -56,6 +63,13 @@
   text-align: center;
   gap: var(--space-8);
   padding-block: var(--space-32);
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding-block: var(--space-12);
+    gap: var(--space-6);
+  }
 }
 
 .headline {
