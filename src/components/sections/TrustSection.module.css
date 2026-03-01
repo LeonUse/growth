@@ -26,15 +26,6 @@
   text-align: center;
 }
 
-.missionLabel {
-  font-size: var(--text-xs);
-  font-weight: var(--fw-semibold);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin-bottom: var(--space-4);
-}
-
 .missionText {
   font-size: var(--text-xl);
   line-height: 1.7;
@@ -46,6 +37,7 @@
   font-size: var(--text-2xl);
   margin-bottom: var(--space-8);
   text-align: center;
+  color: var(--color-accent);
 }
 
 .processSection {
@@ -138,8 +130,6 @@
 .techIcon {
   font-size: 1.5rem;
 }
-
-.techName { }
 
 /* Testimonials */
 .testimonialGrid {

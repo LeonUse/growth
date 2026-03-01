@@ -18,6 +18,10 @@ export const FAQSection: React.FC = () => {
 
   return (
     <section className={`section ${styles.faq}`} id="faq">
+      <div className={styles.bg}>
+        <div className={styles.bgGrid} />
+      </div>
+
       <div className="container">
         <div className={styles.header} ref={headerRef as React.RefObject<HTMLDivElement>}>
           <span className="accent-line" />

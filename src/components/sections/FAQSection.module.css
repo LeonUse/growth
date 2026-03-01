@@ -1,4 +1,25 @@
-.faq {}
+.faq {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgGrid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(var(--color-accent) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-accent) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.15;
+  mask-image: radial-gradient(150% 150% at 0% 100%, black 10%, transparent 60%);
+}
 
 .header {
   text-align: center;
@@ -21,4 +42,6 @@
 .content {
   max-width: 800px;
   margin-inline: auto;
+  position: relative;
+  z-index: 1;
 }

@@ -37,7 +37,7 @@ describe('Navbar', () => {
 
   it('scrolls to top when clicking the logo', () => {
     render(<Navbar />, { wrapper: Wrapper })
-    const logo = screen.getByText('Growth.').closest('a')
+    const logo = screen.getByText('rowth.').closest('a')
     expect(logo).toBeInTheDocument()
 
     fireEvent.click(logo!)

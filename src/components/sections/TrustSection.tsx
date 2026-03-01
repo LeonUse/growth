@@ -36,7 +36,7 @@ export const TrustSection: React.FC = () => {
 
         {/* Mission */}
         <div className={styles.mission}>
-          <p className={styles.missionLabel}>{t('mission')}</p>
+          <h3 className={styles.sectionTitle}>{t('mission')}</h3>
           <p className={styles.missionText}>{t('missionText')}</p>
         </div>
 
